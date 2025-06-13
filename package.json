@@ -1,0 +1,26 @@
+{
+  "name": "nysenate",
+  "version": "1.0.0",
+  "description": "New York State Senate Redmine theme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nysenate/redmine-theme-nysenate.git"
+  },
+  "author": "Ken Zalewski",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/nysenate/redmine-theme-nysenate/issues"
+  },
+  "homepage": "https://github.com/nysenate/redmine-theme-nysenate",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "github-markdown-css": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
