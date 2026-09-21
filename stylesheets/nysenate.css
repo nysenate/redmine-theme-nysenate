@@ -73,8 +73,8 @@ tr.even.status-10 { background: #dfff8f !important; }
 
 
 /* hover fix for resolved */
-table.list tbody tr:hover { background-color:#f9fdff !important; color: #000 !important; }
-table.list tbody tr:hover a { color: #000 !important;}
+table.list tbody tr.issue:hover { background-color:#f9fdff !important; color: #000 !important; }
+table.list tbody tr.issue:hover a { color: #000 !important;}
 
 p.breadcrumb {
 	background-color:#EEEEBB;
