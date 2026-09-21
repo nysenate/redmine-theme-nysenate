@@ -68,10 +68,6 @@ tt, code, pre {
   border-bottom: 1px solid #e5e5e5;
 }
 
-#top-menu #loggedas {
-  color: #222;
-}
-
 #top-menu .top-menu__links a {
   color: #333;
   font-weight: bold;
@@ -99,6 +95,38 @@ tt, code, pre {
 
 #account .dropdown-trigger:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+#account .dropdown-content {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+#account .dropdown-content .user-info {
+  color: #222;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(#f9f9f9, #f3f3f3);
+  text-shadow: 0 1px 0 #fff;
+}
+
+#account .dropdown-content .user-info .user-login {
+  color: #888;
+}
+
+#account .dropdown-divider,
+#account .dropdown-content .logout {
+  border-color: #e5e5e5;
+}
+
+#account .dropdown-content li a {
+  color: #333;
+}
+
+#account .dropdown-content li a:hover {
+  color: #fff;
+  background-color: #4183C4;
 }
 
 div.flash {
@@ -1068,10 +1096,15 @@ body.action-login #login-form table {
   padding: 6px 10px 6px 10px;
 }
 
-#sidebar a.selected {
+#sidebar a.selected,
+#sidebar a.selected:hover {
   background-color: transparent;
-  color: gray;
+  color: #333;
   font-weight: bold;
+}
+
+#sidebar a.selected svg.icon-svg {
+  stroke: #333 !important;
 }
 
 .enabled_scm th {
