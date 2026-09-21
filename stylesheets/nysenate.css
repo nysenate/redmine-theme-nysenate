@@ -10,41 +10,53 @@
 }
 
 
-/* Issue Priorities */
+/* Issue Priorities
+ *
+ * Uses Redmine's rank-based classes (priority-lowest/default/high3/high2/
+ * highest), which are derived from each priority's position relative to the
+ * default priority, so they are stable across instances regardless of
+ * database IDs.
+ */
 
 /* immediate */
-tr.priority-7, table.list tr.priority-7 a { color: #fff; font-weight: bold; }
-#tr.priority-7.issue td { border-bottom: solid 1px #970d00; }
-tr.odd.priority-7 { background: #9b4842; }
-tr.even.priority-7 { background: #a4443c; }
+tr.priority-highest, table.list tbody tr.priority-highest a { color: #fff; font-weight: bold; }
+#tr.priority-highest.issue td { border-bottom: solid 1px #970d00; }
+tr.odd.priority-highest { background: #9b4842; }
+tr.even.priority-highest { background: #a4443c; }
 
 /* urgent */
-tr.priority-6 { font-weight: bold; } 
-#tr.priority-6.issue td { border-bottom: solid 1px #d1413c; }
-tr.odd.priority-6 { background: #f9776d !important; }
-tr.even.priority-6 { background: #ff6d5c !important; }
+tr.priority-high2 { font-weight: bold; } 
+#tr.priority-high2.issue td { border-bottom: solid 1px #d1413c; }
+tr.odd.priority-high2 { background: #f9776d !important; }
+tr.even.priority-high2 { background: #ff6d5c !important; }
 
 /* high */
-tr.priority-5 { font-weight: bold; }
-#tr.priority-5.issue td { border-bottom: solid 1px #e16638; }
-tr.odd.priority-5 { background: #ffad89 !important; }
-tr.even.priority-5 { background: #ffac75 !important; }
+tr.priority-high3 { font-weight: bold; }
+#tr.priority-high3.issue td { border-bottom: solid 1px #e16638; }
+tr.odd.priority-high3 { background: #ffad89 !important; }
+tr.even.priority-high3 { background: #ffac75 !important; }
 
 /* normal */
-#tr.priority-4.issue td { border-bottom: solid 1px #c58100; }
-tr.odd.priority-4 { background: #fdf9d4; }
-tr.even.priority-4 { background: #fbf5c0; }
+#tr.priority-default.issue td { border-bottom: solid 1px #c58100; }
+tr.odd.priority-default { background: #fdf9d4; }
+tr.even.priority-default { background: #fbf5c0; }
 
 /* low */
-#tr.priority-3.issue td { border-bottom: solid 1px #ffa700; }
-tr.odd.priority-3 { background: #fffef2 !important; }
-tr.even.priority-3 { background: #f9f7e4 !important; }
+#tr.priority-lowest.issue td { border-bottom: solid 1px #ffa700; }
+tr.odd.priority-lowest { background: #fffef2 !important; }
+tr.even.priority-lowest { background: #f9f7e4 !important; }
 
 
-/* Issue Statuses: Resolved, Resolved Pending Upgrade, Resolved Verified */
+/* Issue Statuses: Resolved, Resolved Pending Upgrade, Resolved Verified
+ *
+ * Redmine only exposes statuses as ID-based classes (status-<id>), so these
+ * rules target the production status IDs:
+ *   3 = Resolved, 9 = Resolved - Verified, 10 = Resolved Pending Upgrade
+ * Instances with different status IDs need these selectors adjusted.
+ */
 
 tr.status-3, tr.status-9, tr.status-10 { color: #1b520e !important; }
-table.list tr.status-3 a, table.list tr.status-9 a, table.list tr.status-10 a { color: #1b520e; }
+table.list tbody tr.status-3 a, table.list tbody tr.status-9 a, table.list tbody tr.status-10 a { color: #1b520e; }
 #tr.issue.status-3 td, tr.issue.status-9 td, tr.issue.status-10 td { border-bottom: solid 1px #7faf73; }
 
 /* resolved */
