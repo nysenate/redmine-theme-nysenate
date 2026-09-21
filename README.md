@@ -27,17 +27,6 @@ git clone https://github.com/nysenate/redmine-theme-nysenate.git nysenate
 1. Select ``Nysenate`` from the ``Theme`` drop-down
 1. Click the ``Save`` button
 
-## Development
-
-```
-cd redmine/themes/
-git clone https://github.com/nysenate/redmine-theme-nysenate.git nysenate
-cd nysenate/
-npm install -g gulp-cli
-yarn
-gulp debug
-```
-
 ## License
 
 GNU General Public License (GPL) Version 2
